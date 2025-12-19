@@ -1,0 +1,117 @@
+/* src/Settings.css */
+
+/* Lớp phủ mờ đen phía sau */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s;
+}
+
+/* Hộp thoại chính */
+.settings-box {
+  background-color: #1e1e1e;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 24px;
+  border: 1px solid #333;
+  padding: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  color: #fff;
+  animation: zoomIn 0.2s;
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+.settings-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.close-btn:hover { color: #fff; transform: rotate(90deg); }
+
+/* Các dòng cài đặt */
+.setting-item {
+  margin-bottom: 20px;
+}
+
+.setting-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+.setting-desc {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* Input & Range Styles */
+.setting-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #111;
+  color: white;
+  outline: none;
+}
+
+.setting-range {
+  width: 100%;
+  accent-color: #007bff; /* Màu thanh trượt */
+  height: 6px;
+  background: #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-settings-btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.save-settings-btn:hover {
+  background: #0056b3;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
